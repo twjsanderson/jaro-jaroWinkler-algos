@@ -26,14 +26,12 @@ const jaroWinklerSimilarity = (str1, str2) => {
 
     // Find the number of identical prefixes between
     // both strings, to a max dist of 4
-    let dist = Math.min(str1.length, str2.length, 4);
+    const dist = Math.min(str1.length, str2.length, 4);
 
     // Compare each character in the string at (at the same index), 
     // if they are equal increment the prefix by 1
     for (let i = 0; i < dist; i++) {
-        if (str1[i] === str2[i]) {
-            prefix++;
-        }
+        if (str1[i] === str2[i]) prefix++;
     }
 
     // Calculate Jaro Winkler Similarity
